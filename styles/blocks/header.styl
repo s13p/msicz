@@ -1,0 +1,126 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 40px 35px 0;
+    z-index: 99;
+
+    &__version {
+        position: absolute;
+        top: -4px;
+        left: 100%;
+        font-size: 11px;
+        line-height: 1.4;
+        letter-spacing: 0;
+        margin-left: 5px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    &__logo {
+        position: absolute;
+        left: 0;
+        top: 6px;
+        color: $c1;
+        line-height: 0;
+        opacity: 1;
+        transition: opacity $duration $duration;
+    }
+
+    &__burger {
+        width: 52px;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        position: relative;
+        color: $c1;
+        display: none;
+        margin-left: auto;
+        z-index: 10;
+        opacity: 1;
+        transition: opacity $duration $duration;
+
+        span {
+            display: block;
+            position: absolute;
+            width: 52px;
+            height: 1px;
+            top: 50%;
+            left: 50%;
+            margin-left: -26px;
+            background-color: currentColor;
+            transition: margin $duration $duration, transform $duration;
+
+            &:first-child {
+                margin-top: -5px;
+            }
+
+            &:last-child {
+                margin-top: 4px;
+            }
+        }
+    }
+}
+
+@media $medium {
+    .header {
+        &__logo {
+            width: 200px;
+
+            .svg-icon {
+                width: 100% !important;
+                height: auto !important;
+            }
+        }
+    }
+}
+
+@media $small {
+    .header {
+        padding: 32px 20px 0;
+
+        &__container {
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        &__logo {
+            width: 140px;
+            position: relative;
+            z-index: 10;
+            top: 0;
+        }
+
+        &__nav {
+            display: flex;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: url(../images/nav-bg.jpg) 50% 0 no-repeat;
+            background-size: cover;
+            bottom: 100%;
+            left: 0;
+            transform: translateY(0);
+            z-index: 9;
+            padding: 100px 20px;
+            overflow-y: auto;
+            transition: transform $duration;
+        }
+
+        &__burger {
+            display: block;
+        }
+    }
+}
+
+@media $xsmall {
+    .header {
+        padding: 26px 20px 0;
+    }
+}
