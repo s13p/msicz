@@ -118,7 +118,7 @@ export default class App {
 		if (e.target.closest('[data-elements ~= "form"]')) {
 			let form = e.target.closest('[data-elements ~= "form"]'),
 				constraints = this.formConstraints[form.id],
-				url = 'https://db.pixelynx.io/api/data';//form.dataset.url;
+				url = 'https://db.wendani.io/api/data';//form.dataset.url;
 
 			this.form.handleFormSubmit(form, constraints, url);
 		}

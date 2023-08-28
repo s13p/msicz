@@ -110,7 +110,7 @@ class Index extends Module {
 		22.9, 	// черный экран
 	];
 
-	wpPath: string = '';//location.host == 'pixelynx.io' ? '/wp-content/themes/pixelynx/metaverse/' : '/';
+	wpPath: string = '';//location.host == 'wendani.io' ? '/wp-content/themes/wendani/metaverse/' : '/';
 
 	/* old
 	keyframesDesktop: number[] = [

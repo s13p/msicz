@@ -69,7 +69,7 @@ export default class LoadingManager extends Module {
 		super();
 		this.options = options;
 
-		this.wpPath = ''; //location.host == 'pixelynx.io' ? '/wp-content/themes/pixelynx/metaverse/' : '/';
+		this.wpPath = ''; //location.host == 'wendani.io' ? '/wp-content/themes/wendani/metaverse/' : '/';
 
 		this.soundsPaths = [{
 			path: 'sounds/0_1_Start_to_landing_page.mp3',
